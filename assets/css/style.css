@@ -11,6 +11,8 @@
   --gold: #C7C05E;
   --charcoal: #2B2B28;
   --white: #FFFFFF;
+  --oxblood: #5C2331;
+  --oxblood-soft: #C9A0A8;
 
   --font-display: "Fraunces", Georgia, "Times New Roman", serif;
   --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -313,9 +315,19 @@ section + section { border-top: 1px solid rgba(43,43,40,0.08); }
   gap: 0.9rem;
 }
 .tier-card.featured {
-  background: var(--blush);
-  border-color: var(--blush);
+  background: var(--oxblood);
+  border-color: var(--oxblood);
+  color: var(--cream);
 }
+.tier-card.featured .tier-price { color: var(--cream); }
+.tier-card.featured .tier-tagline { color: var(--oxblood-soft); }
+.tier-card.featured ul { color: var(--cream-dim); }
+.tier-card.featured .btn-primary {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--forest);
+}
+.tier-card.featured .btn-primary:hover { background: #b8b153; }
 .tier-price {
   font-family: var(--font-display);
   font-size: 1.6rem;
@@ -341,7 +353,7 @@ section + section { border-top: 1px solid rgba(43,43,40,0.08); }
   text-transform: uppercase;
   color: var(--gold);
 }
-.tier-card.featured .tier-badge { color: var(--forest); }
+.tier-card.featured .tier-badge { color: var(--gold); }
 
 /* ---------- Founder ---------- */
 .avatar-mono {
@@ -400,6 +412,7 @@ section + section { border-top: 1px solid rgba(43,43,40,0.08); }
   display: flex;
   align-items: flex-end;
   padding: 0.9rem;
+  overflow: hidden;
 }
 .gallery-tile span {
   background: rgba(32,48,31,0.85);
@@ -408,6 +421,12 @@ section + section { border-top: 1px solid rgba(43,43,40,0.08); }
   font-weight: 600;
   padding: 0.4em 0.7em;
   border-radius: var(--radius);
+}
+.gallery-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
 }
 
 /* ---------- Callout / CTA band ---------- */
