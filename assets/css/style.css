@@ -65,11 +65,8 @@ p { margin: 0 0 1.2em; }
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--gold);
-  background: var(--forest);
-  padding: 0.45em 1.1em;
+  color: var(--oxblood);
   margin-bottom: 1.4em;
-  border-radius: var(--radius-pill);
 }
 
 .wrap {
