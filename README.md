@@ -31,5 +31,6 @@ Enable GitHub Pages in repo Settings → Pages → Deploy from branch `main` / r
 ## Known placeholders to swap in
 
 - Founder headshot (currently a monogram) in `about.html` / `index.html`
+- "Community in Action" gallery tiles in `about.html`
 - Career coaching deliverables + pricing in `coaching.html`
 - "At the Table" tier pricing once finalized
