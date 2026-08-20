@@ -19,7 +19,8 @@
 
   --max: 1180px;
   --gap: clamp(1.5rem, 4vw, 4rem);
-  --radius: 2px;
+  --radius: 22px;
+  --radius-pill: 999px;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -66,8 +67,9 @@ p { margin: 0 0 1.2em; }
   text-transform: uppercase;
   color: var(--gold);
   background: var(--forest);
-  padding: 0.45em 0.9em;
+  padding: 0.45em 1.1em;
   margin-bottom: 1.4em;
+  border-radius: var(--radius-pill);
 }
 
 .wrap {
@@ -89,7 +91,7 @@ section + section { border-top: 1px solid rgba(43,43,40,0.08); }
   font-size: 0.95rem;
   padding: 0.9em 1.7em;
   border: 1.5px solid var(--forest);
-  border-radius: var(--radius);
+  border-radius: var(--radius-pill);
   transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
   cursor: pointer;
 }
@@ -309,17 +311,19 @@ section + section { border-top: 1px solid rgba(43,43,40,0.08); }
 
 .tier-card {
   background: var(--white);
-  border: 1px solid rgba(43,43,40,0.1);
+  border: 1px solid rgba(43,43,40,0.06);
   border-radius: var(--radius);
   padding: 2rem 1.7rem;
   display: flex;
   flex-direction: column;
   gap: 0.9rem;
+  box-shadow: 0 4px 20px rgba(43,43,40,0.05);
 }
 .tier-card.featured {
   background: var(--oxblood);
   border-color: var(--oxblood);
   color: var(--cream);
+  box-shadow: 0 8px 28px rgba(92,35,49,0.18);
 }
 .tier-card.featured .tier-price { color: var(--cream); }
 .tier-card.featured .tier-tagline { color: var(--oxblood-soft); }
@@ -382,11 +386,6 @@ section + section { border-top: 1px solid rgba(43,43,40,0.08); }
 }
 
 /* ---------- Hero photo panel ---------- */
-.photo-panel {
-  background: var(--forest);
-  border-radius: var(--radius);
-  padding: clamp(1.4rem, 3vw, 2.2rem);
-}
 .hero-photo {
   margin-top: clamp(2rem, 5vw, 3rem);
   border-radius: var(--radius);
