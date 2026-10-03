@@ -303,6 +303,58 @@ section + section { border-top: 1px solid rgba(43,43,40,0.08); }
   margin-bottom: clamp(2rem, 5vw, 3rem);
 }
 
+/* ---------- Stat callout ---------- */
+.stat-callout {
+  text-align: center;
+  max-width: 68ch;
+  margin: 0 auto;
+}
+.stat-callout .eyebrow { display: block; }
+.stat-number {
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 9vw, 5.5rem);
+  font-weight: 600;
+  color: var(--oxblood);
+  line-height: 1;
+  margin: 0.2em 0 0.3em;
+}
+.stat-caption {
+  font-size: 1.1rem;
+  color: var(--forest-soft);
+  max-width: 56ch;
+  margin: 0 auto 0.7em;
+}
+.stat-source {
+  font-size: 0.8rem;
+  color: var(--forest-soft);
+  opacity: 0.7;
+  margin: 0;
+}
+
+/* ---------- Three-up pillar grid ---------- */
+.pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+}
+@media (max-width: 860px) { .pillar-grid { grid-template-columns: 1fr; } }
+.pillar-card {
+  background: var(--white);
+  border: 1px solid rgba(43,43,40,0.06);
+  border-radius: var(--radius);
+  padding: 1.8rem 1.6rem;
+  box-shadow: 0 4px 20px rgba(43,43,40,0.05);
+}
+.pillar-num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--oxblood);
+  margin-bottom: 0.6em;
+}
+.pillar-card h3 { margin-bottom: 0.4em; }
+.pillar-card p { margin: 0; color: var(--forest-soft); font-size: 0.95rem; }
+
 /* ---------- Press logo marquee ---------- */
 .marquee {
   overflow: hidden;
