@@ -430,11 +430,10 @@ section + section { border-top: 1px solid rgba(43,43,40,0.08); }
 /* ---------- Membership cards ---------- */
 .tier-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.4rem;
 }
-@media (max-width: 1000px) { .tier-grid { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 600px) { .tier-grid { grid-template-columns: 1fr; } }
+@media (max-width: 860px) { .tier-grid { grid-template-columns: 1fr; } }
 
 .tier-card {
   background: var(--white);
@@ -446,21 +445,6 @@ section + section { border-top: 1px solid rgba(43,43,40,0.08); }
   gap: 0.9rem;
   box-shadow: 0 4px 20px rgba(43,43,40,0.05);
 }
-.tier-card.featured {
-  background: var(--oxblood);
-  border-color: var(--oxblood);
-  color: var(--cream);
-  box-shadow: 0 8px 28px rgba(92,35,49,0.18);
-}
-.tier-card.featured .tier-price { color: var(--cream); }
-.tier-card.featured .tier-tagline { color: var(--oxblood-soft); }
-.tier-card.featured ul { color: var(--cream-dim); }
-.tier-card.featured .btn-primary {
-  background: var(--gold);
-  border-color: var(--gold);
-  color: var(--forest);
-}
-.tier-card.featured .btn-primary:hover { background: #b8b153; }
 .tier-price {
   font-family: var(--font-display);
   font-size: 1.6rem;
@@ -486,8 +470,6 @@ section + section { border-top: 1px solid rgba(43,43,40,0.08); }
   text-transform: uppercase;
   color: var(--gold);
 }
-.tier-card.featured .tier-badge { color: var(--gold); }
-
 .draft-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
