@@ -331,6 +331,28 @@ section + section { border-top: 1px solid rgba(43,43,40,0.08); }
   margin: 0;
 }
 
+/* ---------- Photo-backed section ---------- */
+.photo-section {
+  position: relative;
+  overflow: hidden;
+}
+.photo-section .bg-photo {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center 22%;
+}
+.photo-section .scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(32,48,31,0.9) 0%, rgba(32,48,31,0.78) 55%, rgba(32,48,31,0.9) 100%);
+}
+.photo-section .wrap { position: relative; z-index: 1; }
+.photo-section .stat-number { color: var(--gold); }
+.photo-section .stat-caption { color: var(--cream); }
+.photo-section .stat-source { color: var(--cream-dim); opacity: 0.75; }
+.photo-section .eyebrow { color: var(--blush); }
+
 /* ---------- Three-up pillar grid ---------- */
 .pillar-grid {
   display: grid;
