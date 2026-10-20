@@ -18,3 +18,14 @@ If information is incomplete (e.g. a third panelist isn't confirmed), either lea
 the piece entirely, use a clearly-marked placeholder (e.g. "[Date]"), or ask the user — don't
 narrate the gap in the output itself. Every line on a finished piece should be something the
 intended audience is meant to read, not a note to/from the user.
+
+## "Bouncing Back" panelist content — required fields
+
+Every panelist-facing piece (speaker spotlight card, the main flyer's photo card, any future
+per-panelist graphic) must include all three of:
+1. Name
+2. Time spent searching/unemployed before landing the role
+3. New job title
+
+Don't drop the "time spent searching" figure just because space is tight — it's the point of
+the story (the comeback), not optional detail.
