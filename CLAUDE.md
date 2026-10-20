@@ -29,3 +29,16 @@ per-panelist graphic) must include all three of:
 
 Don't drop the "time spent searching" figure just because space is tight — it's the point of
 the story (the comeback), not optional detail.
+
+## "Bouncing Back" visual template — use the bold poster style
+
+The user explicitly rejected the quiet dark-panel/circle-avatar template (plain forest
+background, small circular photo, centered text) for this series. The approved template is
+the bold poster style matching the DC Startup & Tech Week reference the user shared: color-
+block background shapes (gold diagonal, etc.), a large gold-bordered photo frame with a
+semi-transparent name/journey bar overlaid directly on the bottom of the photo, and stacked
+color info-bands (oxblood date/time band, gold RSVP band) at the very bottom of the canvas.
+
+This is implemented in `bold-poster-styles.css` in the social-templates scratchpad folder.
+Every piece in the "Bouncing Back" series (the main flyer and each individual speaker card)
+should use this shared stylesheet/structure — don't reintroduce the old dark-panel template.
