@@ -610,6 +610,26 @@ section + section { border-top: 1px solid rgba(43,43,40,0.08); }
   color: var(--gold);
   margin-bottom: 0.7rem;
 }
+.gn-card.c-gold { background: var(--gold); }
+.gn-card.c-gold .gn-mark { color: var(--oxblood); }
+.gn-card.c-gold p { color: var(--forest); }
+.gn-card.c-gold .gn-attr { color: var(--forest); }
+
+.gn-card.c-blush { background: var(--blush); }
+.gn-card.c-blush .gn-mark { color: var(--oxblood); }
+.gn-card.c-blush p { color: var(--forest); }
+.gn-card.c-blush .gn-attr { color: var(--oxblood); }
+
+.gn-card.c-oxblood { background: var(--oxblood); }
+.gn-card.c-oxblood .gn-mark { color: var(--gold); }
+.gn-card.c-oxblood p { color: var(--cream); }
+.gn-card.c-oxblood .gn-attr { color: var(--blush); }
+
+.gn-card.c-forest-soft { background: var(--forest-soft); }
+.gn-card.c-forest-soft .gn-mark { color: var(--gold); }
+.gn-card.c-forest-soft p { color: var(--cream); }
+.gn-card.c-forest-soft .gn-attr { color: var(--blush); }
+
 .gn-card p {
   font-family: var(--font-display);
   font-size: 1.02rem;
