@@ -567,6 +567,65 @@ section + section { border-top: 1px solid rgba(43,43,40,0.08); }
   .hero-photo { aspect-ratio: 4/3; }
 }
 
+/* ---------- Good news marquee ---------- */
+.good-news {
+  background: var(--forest);
+  overflow: hidden;
+}
+.good-news .wrap {
+  text-align: center;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+.good-news .eyebrow { color: var(--blush); }
+.good-news h2 { color: var(--cream); margin: 0 auto; }
+
+.marquee { overflow: hidden; width: 100%; }
+.marquee-track {
+  display: flex;
+  gap: 1.4rem;
+  width: max-content;
+  animation: marquee-scroll 60s linear infinite;
+}
+.marquee:hover .marquee-track { animation-play-state: paused; }
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}
+
+.gn-card {
+  flex: none;
+  width: min(340px, 82vw);
+  background: var(--cream-dim);
+  border-radius: 14px;
+  padding: 1.7rem 1.6rem;
+}
+.gn-card .gn-mark {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2.3rem;
+  line-height: 0.4;
+  color: var(--gold);
+  margin-bottom: 0.7rem;
+}
+.gn-card p {
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  line-height: 1.5;
+  color: var(--forest);
+  margin: 0;
+}
+.gn-card .gn-attr {
+  margin-top: 1rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  color: var(--oxblood);
+}
+
 /* ---------- Callout / CTA band ---------- */
 .cta-band {
   background: var(--forest);
