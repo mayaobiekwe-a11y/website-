@@ -42,3 +42,19 @@ color info-bands (oxblood date/time band, gold RSVP band) at the very bottom of 
 This is implemented in `bold-poster-styles.css` in the social-templates scratchpad folder.
 Every piece in the "Bouncing Back" series (the main flyer and each individual speaker card)
 should use this shared stylesheet/structure — don't reintroduce the old dark-panel template.
+
+## Any event/talk flyer — same rule, not just "Bouncing Back"
+
+This isn't specific to the Bouncing Back series. User feedback on a different flyer (the
+Janai Norman "Not Renewed, Not Finished" piece): a flyer with no BWR branding anywhere, a
+floating pill-shaped date badge, and a thin arrow link at the bottom "looks very AI-ish" and
+"is not even a flyer." A full-bleed photo with a gradient scrim and text floating over it is
+not a flyer by itself — it's missing the organization's identity and the structural elements
+(stacked color info-bands, a visible logo mark, a bordered photo frame) that make something
+read as a real promotional flyer rather than a generic quote-card or magazine-style graphic.
+
+Default to `bold-poster-styles.css` for any event/talk/panel flyer, branded or not. A
+request for "a different design" or "new design" means vary the color palette, background
+shapes, or photo treatment within that structure — it does not mean drop the BWR mark or the
+stacked info-bands. If a genuinely different structure seems warranted, ask first rather than
+shipping an unbranded piece.
