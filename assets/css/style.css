@@ -492,6 +492,13 @@ section + section { border-top: 1px solid rgba(43,43,40,0.08); }
   text-transform: uppercase;
   color: var(--gold);
 }
+/* ---------- Events ---------- */
+.event-meta {
+  font-weight: 600;
+  color: var(--oxblood);
+  margin-bottom: 1.2rem;
+}
+
 /* ---------- Resource guide ---------- */
 .resource-grid {
   display: grid;
