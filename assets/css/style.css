@@ -492,6 +492,94 @@ section + section { border-top: 1px solid rgba(43,43,40,0.08); }
   text-transform: uppercase;
   color: var(--gold);
 }
+/* ---------- Resource guide ---------- */
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.4rem;
+}
+@media (max-width: 860px) { .resource-grid { grid-template-columns: 1fr; } }
+
+.resource-card {
+  background: var(--white);
+  border: 1px solid rgba(43,43,40,0.06);
+  border-top: 4px solid var(--oxblood);
+  border-radius: var(--radius);
+  padding: 1.8rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  box-shadow: 0 4px 20px rgba(43,43,40,0.05);
+}
+.resource-card.c-forest { border-top-color: var(--forest); }
+.resource-card.c-gold { border-top-color: var(--gold); }
+
+.resource-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+.resource-card-head h3 { margin: 0; font-size: 1.3rem; }
+.resource-pill {
+  display: inline-flex;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.3em 0.75em;
+  border-radius: var(--radius-pill);
+  background: var(--oxblood-soft);
+  color: var(--oxblood);
+  white-space: nowrap;
+}
+.resource-card.c-forest .resource-pill { background: #CFE0CC; color: var(--forest); }
+.resource-card.c-gold .resource-pill { background: #F0EDD2; color: #6b662e; }
+
+.resource-card p { margin: 0; font-size: 0.95rem; color: var(--forest-soft); }
+.resource-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+  color: var(--forest-soft);
+}
+.resource-card li { margin-bottom: 0.35em; }
+.resource-contact {
+  border-top: 1px solid rgba(43,43,40,0.08);
+  padding-top: 0.8rem;
+  font-size: 0.88rem;
+  color: var(--forest-soft);
+}
+.resource-card .btn { align-self: flex-start; margin-top: 0.2rem; }
+
+.resource-triage {
+  background: var(--cream-dim);
+  border-radius: var(--radius);
+  padding: 2rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.resource-triage-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  font-size: 0.92rem;
+}
+@media (max-width: 860px) { .resource-triage-grid { grid-template-columns: 1fr; } }
+
+.resource-sources {
+  font-size: 0.82rem;
+  color: var(--forest-soft);
+}
+.resource-sources a {
+  display: inline-block;
+  margin: 0 1.1rem 0.5rem 0;
+  text-decoration: underline;
+  text-decoration-color: rgba(43,43,40,0.25);
+}
+.resource-sources a:hover { color: var(--oxblood); }
+
 .draft-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
