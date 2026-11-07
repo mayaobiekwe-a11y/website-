@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest-dark:#20301F;
+    --cream:#F5F1E6; --blush:#DDBBAE; --gold:#C7C05E; --oxblood:#5C2331;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html,body{ width:1080px; height:1350px; }
+  body{
+    background: #F7F1EC;
+    font-family: "Libre Franklin", sans-serif;
+    color: var(--forest-dark);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .photo{
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 470px;
+    background-image: url("photos/janai-orig.jpg");
+    background-size: cover;
+    background-position: center top;
+  }
+  .photo-edge{
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 610px;
+    width: 10px;
+    background: var(--gold);
+  }
+
+  .text{
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 610px;
+    padding: 64px 50px 64px 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .headline{
+    font-family: "Archivo Black", sans-serif;
+    font-size: 86px;
+    line-height: 0.98;
+    letter-spacing: -0.015em;
+    color: var(--forest-dark);
+  }
+
+  .name{
+    font-family: "Libre Franklin", sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 1.45;
+    color: var(--oxblood);
+    margin-top: 34px;
+    max-width: 500px;
+  }
+  .role{
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--oxblood);
+    margin-top: 20px;
+  }
+
+  .body-text{
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 1.6;
+    color: #4A4136;
+    margin-top: 40px;
+    max-width: 500px;
+  }
+
+  .rule{
+    width: 70px; height: 4px;
+    background: var(--gold);
+    margin-top: 46px;
+  }
+  .when{
+    font-weight: 700;
+    font-size: 27px;
+    color: var(--forest-dark);
+    margin-top: 24px;
+  }
+  .rsvp{
+    font-weight: 400;
+    font-size: 18px;
+    color: #4A4136;
+    margin-top: 8px;
+  }
+
+  .wordmark{
+    position: absolute;
+    left: 64px; bottom: 48px;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--forest-dark);
+  }
+  .wordmark span{ color: var(--oxblood); }
+</style>
+</head>
+<body>
+  <div class="photo"></div>
+  <div class="photo-edge"></div>
+
+  <div class="text">
+    <div class="headline">NOT<br>RENEWED,<br>NOT<br>FINISHED.</div>
+
+    <div class="name">A conversation with Janai Norman on the courage to begin again.</div>
+    <div class="role">Journalist &middot; Author &middot; Media Literacy Advocate</div>
+
+    <div class="body-text">Janai once reported on the systemic inequities behind America's unemployment crisis, featuring the stories of job seekers and the Black Women Rising community itself. Now she's coming back, not as press, but as one of us.</div>
+
+    <div class="rule"></div>
+    <div class="when">Monday, November 9 &middot; 6:00 PM ET</div>
+    <div class="rsvp">RSVP via the link in our bio.</div>
+  </div>
+
+  <div class="wordmark">Black Women <span>Rising</span></div>
+</body>
+</html>
