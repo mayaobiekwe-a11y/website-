@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @font-face{ font-family:"Fraunces"; font-weight:600; src:url("fonts/fraunces-600.woff2") format("woff2"); }
+  @font-face{ font-family:"Inter"; font-weight:700; src:url("fonts/inter-700.woff2") format("woff2"); }
+  @font-face{ font-family:"Inter"; font-weight:600; src:url("fonts/inter-600.woff2") format("woff2"); }
+  :root{
+    --forest:#20301F; --forest-dark:#141E13; --cream:#F5F1E6;
+    --blush:#DDBBAE; --gold:#C7C05E; --oxblood:#5C2331; --oxblood-dark:#3F1823;
+    --font-display:"Fraunces", Georgia, serif;
+    --font-body:"Inter", -apple-system, "Segoe UI", sans-serif;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html,body{ width:1080px; height:1350px; }
+  body{
+    background: var(--oxblood);
+    font-family: var(--font-body);
+    color: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+  /* color-block background shape */
+  .shape-gold{
+    position: absolute;
+    top: -220px; right: -260px;
+    width: 760px; height: 760px;
+    background: var(--gold);
+    transform: rotate(18deg);
+    z-index: 0;
+  }
+  .shape-dark{
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 560px;
+    background: var(--oxblood-dark);
+    z-index: 0;
+  }
+  .mark{
+    position: absolute;
+    top: 44px; left: 52px;
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    border: 2.5px solid var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 19px;
+    letter-spacing: 0.01em;
+    color: var(--cream);
+    z-index: 5;
+  }
+  .eyebrow{
+    position: relative;
+    z-index: 5;
+    padding: 136px 56px 0;
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--forest-dark);
+  }
+  .headline{
+    position: relative;
+    z-index: 5;
+    padding: 14px 56px 0;
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 1.04;
+    letter-spacing: -0.01em;
+    color: var(--forest-dark);
+    max-width: 640px;
+  }
+  .subline{
+    position: relative;
+    z-index: 5;
+    padding: 16px 56px 0;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 1.35;
+    color: var(--cream);
+    max-width: 560px;
+  }
+
+  .mid{
+    position: absolute;
+    left: 0; right: 0;
+    top: 350px; bottom: 150px;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+  .photo-frame{
+    position: relative;
+    width: 620px;
+    height: 460px;
+    border-radius: 16px;
+    border: 6px solid var(--gold);
+    overflow: hidden;
+    box-shadow: 0 30px 50px rgba(0,0,0,0.45);
+  }
+  .photo-frame img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+  }
+  .name-bar{
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    background: linear-gradient(0deg, rgba(20,10,13,0.92) 0%, rgba(20,10,13,0.78) 60%, rgba(20,10,13,0) 100%);
+    padding: 54px 24px 18px;
+    text-align: center;
+  }
+  .name-bar .name{
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--cream);
+  }
+  .name-bar .role{
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--blush);
+    margin-top: 4px;
+    letter-spacing: 0.02em;
+  }
+
+  .fact{
+    position: relative;
+    max-width: 660px;
+    text-align: center;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 1.4;
+    color: var(--blush);
+    padding: 0 56px;
+  }
+
+  .info{
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    z-index: 5;
+  }
+  .info-band{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 18px 20px;
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: 0.02em;
+  }
+  .band-1{ background: var(--gold); color: var(--forest-dark); }
+  .band-2{ background: var(--cream); color: var(--oxblood); text-transform: uppercase; font-size: 16px; letter-spacing: 0.12em; }
+</style>
+</head>
+<body>
+  <div class="shape-gold"></div>
+  <div class="shape-dark"></div>
+
+  <div class="mark">BWR</div>
+
+  <div class="eyebrow">This Monday</div>
+  <div class="headline">Not Renewed,<br>Not Finished.</div>
+  <div class="subline">Janai Norman on life after Good Morning America.</div>
+
+  <div class="mid">
+    <div class="photo-frame">
+      <img src="photos/janai-orig.jpg" alt="">
+      <div class="name-bar">
+        <div class="name">Janai Norman</div>
+        <div class="role">Journalist &middot; Author &middot; Media Literacy Advocate</div>
+      </div>
+    </div>
+
+    <div class="fact">She covered Black Women Rising during Black History Month. Weeks later, she was let go from GMA3.</div>
+  </div>
+
+  <div class="info">
+    <div class="info-band band-1">Monday, November 9 &middot; 6:00 PM ET</div>
+    <div class="info-band band-2">RSVP &middot; Link in Bio &rarr;</div>
+  </div>
+</body>
+</html>

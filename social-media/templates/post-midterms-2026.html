@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @font-face{ font-family:"Inter"; font-weight:600; src:url("fonts/inter-600.woff2") format("woff2"); }
+  @font-face{ font-family:"Inter"; font-weight:700; src:url("fonts/inter-700.woff2") format("woff2"); }
+  :root{
+    --forest:#20301F; --forest-dark:#152016; --cream:#F5F1E6;
+    --blush:#DDBBAE; --gold:#C7C05E; --oxblood:#5C2331;
+    --font-body:"Inter", -apple-system, "Segoe UI", sans-serif;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html,body{ width:1080px; height:1350px; }
+  body{
+    background: var(--forest);
+    font-family: var(--font-body);
+    position: relative;
+    overflow: hidden;
+  }
+  .canvas{
+    position: absolute;
+    inset: 0;
+    padding: 96px 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .eyebrow{
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 36px;
+  }
+  .card{
+    background: var(--cream);
+    border-radius: 22px;
+    padding: 60px 60px 52px;
+    box-shadow: 0 40px 70px rgba(0,0,0,0.3);
+  }
+  .card-top{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 36px;
+  }
+  .notice-tag{
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--oxblood);
+  }
+  .pill{
+    border: 2px solid var(--oxblood);
+    color: var(--oxblood);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .headline{
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.2;
+    color: var(--forest);
+    margin-bottom: 48px;
+  }
+  .headline .hl{
+    background: var(--gold);
+    color: var(--forest-dark);
+    padding: 2px 14px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+  .row{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 26px 0;
+    border-bottom: 1px solid rgba(32,48,31,0.14);
+  }
+  .row:last-child{ border-bottom: none; padding-bottom: 0; }
+  .row .label{
+    flex: 0 0 220px;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--oxblood);
+    padding-top: 3px;
+  }
+  .row .value{
+    flex: 1;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 1.38;
+    color: var(--forest-dark);
+  }
+  .row.final .value{
+    font-size: 27px;
+  }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="eyebrow">Black Women Rising</div>
+    <div class="card">
+      <div class="card-top">
+        <div class="notice-tag">Official Notice</div>
+        <div class="pill">Non-Negotiable</div>
+      </div>
+      <div class="headline">We want all <span class="hl">700,000+</span> Black women back in their jobs.</div>
+      <div class="row">
+        <div class="label">Why</div>
+        <div class="value">94% of Black women voted for change this cycle &mdash; the highest turnout of any demographic.</div>
+      </div>
+      <div class="row">
+        <div class="label">Timeline</div>
+        <div class="value">Now. Not eventually.</div>
+      </div>
+      <div class="row final">
+        <div class="label">What We're Owed</div>
+        <div class="value">We carry this country at the polls. It&rsquo;s time this country carries us back.</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

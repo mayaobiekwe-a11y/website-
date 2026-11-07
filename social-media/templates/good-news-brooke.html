@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @font-face{ font-family:"Fraunces"; font-weight:500; src:url("fonts/fraunces-500.woff2") format("woff2"); }
+  @font-face{ font-family:"Fraunces"; font-weight:600; src:url("fonts/fraunces-600.woff2") format("woff2"); }
+  @font-face{ font-family:"Inter"; font-weight:400; src:url("fonts/inter-400.woff2") format("woff2"); }
+  @font-face{ font-family:"Inter"; font-weight:700; src:url("fonts/inter-700.woff2") format("woff2"); }
+  :root{
+    --forest:#20301F; --forest-soft:#2B3F29; --cream:#F5F1E6;
+    --blush:#DDBBAE; --gold:#C7C05E; --oxblood:#5C2331;
+    --font-display:"Fraunces", Georgia, serif;
+    --font-body:"Inter", -apple-system, "Segoe UI", sans-serif;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html,body{ width:1080px; height:1350px; }
+  body{
+    position: relative;
+    overflow: hidden;
+    background: #2a1a12;
+  }
+  .bg-photo{
+    position: absolute;
+    inset: 0;
+    background-image: url("photos/bg-brooke.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .scrim{
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(21,20,16,0.55) 0%, rgba(21,20,16,0.4) 45%, rgba(21,20,16,0.75) 100%);
+  }
+  .canvas{
+    position: absolute;
+    inset: 0;
+    bottom: 150px;
+    padding: 0 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .eyebrow{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--blush);
+  }
+  .eyebrow .mark{ color: var(--gold); font-size: 20px; }
+  .quote-mark{
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 110px;
+    line-height: 0.6;
+    color: var(--gold);
+    margin-top: 28px;
+  }
+  .quote{
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 46px;
+    line-height: 1.38;
+    color: var(--cream);
+    margin-top: 6px;
+  }
+  .attribution{
+    margin-top: 44px;
+    font-family: var(--font-display);
+    font-size: 24px;
+    color: var(--cream);
+  }
+  .attribution strong{ font-weight: 600; }
+  .attribution span{ font-family: var(--font-body); font-weight: 400; opacity: 0.75; font-size: 20px; }
+  .tag{
+    margin-top: 24px;
+    display: inline-flex;
+    align-self: flex-start;
+    background: var(--gold);
+    color: var(--forest);
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 16px;
+    padding: 9px 20px;
+    border-radius: 999px;
+  }
+  .footer{
+    position: absolute;
+    left: 0; right: 0; bottom: 64px;
+    text-align: center;
+  }
+  .wordmark{
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 26px;
+    color: var(--cream);
+  }
+  .wordmark span{ color: var(--gold); }
+</style>
+</head>
+<body>
+  <div class="bg-photo"></div>
+  <div class="scrim"></div>
+  <div class="canvas">
+    <div class="eyebrow"><span class="mark">&#10022;</span> Share Your Good News</div>
+    <div class="quote-mark">&ldquo;</div>
+    <div class="quote">I applied for an Associate Project Manager position and was offered a Project Manager position instead. They also accepted my counter offer. Feeling a lot better.</div>
+    <div class="attribution">&mdash; <strong>Brooke</strong> <span>&middot; BWR Member</span></div>
+    <div class="tag">New Win &middot; This Week</div>
+  </div>
+  <div class="footer">
+    <div class="wordmark">Black Women <span>Rising</span></div>
+  </div>
+</body>
+</html>

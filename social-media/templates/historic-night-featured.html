@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @font-face{ font-family:"Fraunces"; font-weight:600; src:url("fonts/fraunces-600.woff2") format("woff2"); }
+  @font-face{ font-family:"Fraunces"; font-weight:500; src:url("fonts/fraunces-500.woff2") format("woff2"); }
+  @font-face{ font-family:"Inter"; font-weight:700; src:url("fonts/inter-700.woff2") format("woff2"); }
+  @font-face{ font-family:"Inter"; font-weight:600; src:url("fonts/inter-600.woff2") format("woff2"); }
+  :root{
+    --forest:#20301F; --forest-dark:#141E13; --cream:#F5F1E6;
+    --blush:#DDBBAE; --gold:#C7C05E; --oxblood:#5C2331;
+    --font-display:"Fraunces", Georgia, serif;
+    --font-body:"Inter", -apple-system, "Segoe UI", sans-serif;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html,body{ width:1080px; height:1920px; }
+  body{
+    background: radial-gradient(ellipse 1200px 900px at 50% 0%, #6d2a3c 0%, var(--oxblood) 55%, #3a1620 100%);
+    font-family: var(--font-body);
+    color: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+  .mark{
+    position:absolute;
+    top: 40px; right: 48px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--cream);
+    z-index: 5;
+  }
+  .mark span{ color: var(--gold); }
+
+  .header{
+    padding: 64px 70px 0;
+    text-align: center;
+  }
+  .eyebrow{
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .headline{
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-style: italic;
+    font-size: 54px;
+    line-height: 1.12;
+    color: var(--cream);
+    margin-top: 12px;
+  }
+  .subline{
+    margin-top: 14px;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--blush);
+  }
+
+  .featured{
+    margin: 44px 64px 0;
+    background: var(--cream);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 24px 40px rgba(0,0,0,0.4);
+    display: flex;
+  }
+  .featured .photo{
+    width: 42%;
+    flex: none;
+    background-size: cover;
+    background-position: center 18%;
+  }
+  .featured .info{
+    flex: 1;
+    padding: 36px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .featured .eyebrow2{
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--oxblood);
+  }
+  .featured .name{
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--forest-dark);
+    margin-top: 8px;
+    line-height: 1.15;
+  }
+  .featured .title{
+    font-weight: 700;
+    font-size: 19px;
+    color: var(--forest);
+    margin-top: 6px;
+  }
+  .featured .divider{
+    width: 50px; height: 3px;
+    background: var(--oxblood);
+    margin: 14px 0;
+  }
+  .featured .tagline{
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 1.35;
+    color: var(--oxblood);
+  }
+
+  .grid{
+    margin-top: 28px;
+    padding: 0 44px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px 24px;
+  }
+  .card{
+    background: var(--cream);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 16px 26px rgba(0,0,0,0.32);
+    display: flex;
+    flex-direction: column;
+  }
+  .photo{
+    height: 290px;
+    background-size: cover;
+    background-color: #0e150d;
+  }
+  .name-banner{
+    background: var(--forest);
+    color: var(--cream);
+    text-align: center;
+    padding: 11px 10px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.18;
+  }
+  .info{
+    flex: 1;
+    padding: 14px 16px 16px;
+    text-align: center;
+  }
+  .title{
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1.25;
+    color: var(--forest-dark);
+  }
+  .divider{
+    width: 40px; height: 2px;
+    background: rgba(92,35,49,0.35);
+    margin: 9px auto;
+  }
+  .tagline{
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.3;
+    color: var(--oxblood);
+  }
+
+  .footer{
+    position: absolute;
+    left: 0; right: 0; bottom: 44px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--blush);
+    z-index: 5;
+  }
+</style>
+</head>
+<body>
+  <div class="mark">BW<span>R</span></div>
+
+  <div class="header">
+    <div class="eyebrow">A Historic Night For</div>
+    <div class="headline">Black Women in Leadership</div>
+    <div class="subline">U.S. Elections &middot; November 3, 2026</div>
+  </div>
+
+  <div class="featured">
+    <div class="photo" style="background-image:url('photos/keisha-official.jpg'); background-position:center 18%;"></div>
+    <div class="info">
+      <div class="eyebrow2">The Headline Win</div>
+      <div class="name">Keisha Lance Bottoms</div>
+      <div class="title">Governor of Georgia</div>
+      <div class="divider"></div>
+      <div class="tagline">First Black woman elected governor of a U.S. state</div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="photo" style="background-image:url('photos/stratton-official.jpg'); background-position:center 20%;"></div>
+      <div class="name-banner">Juliana Stratton</div>
+      <div class="info">
+        <div class="title">U.S. Senator &mdash; Illinois</div>
+        <div class="divider"></div>
+        <div class="tagline">Fifth Black woman elected to the U.S. Senate</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="photo" style="background-image:url('photos/plaskett-official.jpg'); background-position:center 12%;"></div>
+      <div class="name-banner">Stacey Plaskett</div>
+      <div class="info">
+        <div class="title">Governor of the U.S. Virgin Islands</div>
+        <div class="divider"></div>
+        <div class="tagline">First Black woman elected governor of a U.S. territory</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="photo" style="background-image:url('photos/plummer-official.png'); background-position:center 15%;"></div>
+      <div class="name-banner">Letitia Plummer</div>
+      <div class="info">
+        <div class="title">Harris County Judge &mdash; Texas</div>
+        <div class="divider"></div>
+        <div class="tagline">First Black woman elected Harris County judge</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="photo" style="background-image:url('photos/james-official.png'); background-position:center 3%;"></div>
+      <div class="name-banner">Letitia James</div>
+      <div class="info">
+        <div class="title">New York Attorney General</div>
+        <div class="divider"></div>
+        <div class="tagline">Won reelection to a third term</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">Black Women Rising</div>
+</body>
+</html>

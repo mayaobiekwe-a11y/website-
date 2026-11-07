@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @font-face{ font-family:"Inter"; font-weight:700; src:url("fonts/inter-700.woff2") format("woff2"); }
+  @font-face{ font-family:"Inter"; font-weight:600; src:url("fonts/inter-600.woff2") format("woff2"); }
+  :root{
+    --cream:#F5F1E6;
+    --blush:#DDBBAE; --gold:#C7C05E; --oxblood:#5C2331;
+    --font-body:"Inter", -apple-system, "Segoe UI", sans-serif;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html,body{ width:1080px; height:1350px; }
+  body{
+    font-family: var(--font-body);
+    position: relative;
+    overflow: hidden;
+    background: #111;
+  }
+  .photo{
+    position: absolute;
+    inset: 0;
+    background-image: url("photos/keisha-official.jpg");
+    background-size: cover;
+    background-position: center 20%;
+  }
+  .scrim{
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10,8,8,0.05) 0%, rgba(10,8,8,0.08) 38%, rgba(10,8,8,0.92) 76%, rgba(6,5,5,0.97) 100%);
+  }
+  .credit{
+    position: absolute;
+    top: 42px; left: 48px;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(245,241,230,0.75);
+    z-index: 5;
+  }
+  .mark{
+    position: absolute;
+    top: 40px; right: 48px;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.04em;
+    color: var(--cream);
+    z-index: 5;
+  }
+  .mark span{ color: var(--gold); }
+
+  .bottom{
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    padding: 0 52px 64px;
+    z-index: 5;
+  }
+  .quote{
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 1.04;
+    letter-spacing: -0.015em;
+    text-transform: uppercase;
+    color: var(--cream);
+    max-width: 960px;
+  }
+  .attribution{
+    margin-top: 22px;
+    font-weight: 700;
+    font-size: 21px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .demand{
+    margin-top: 30px;
+    font-weight: 600;
+    font-size: 19px;
+    color: rgba(245,241,230,0.8);
+  }
+</style>
+</head>
+<body>
+  <div class="photo"></div>
+  <div class="scrim"></div>
+  <div class="credit">Official Portrait &middot; 2022</div>
+  <div class="mark">BW<span>R</span></div>
+
+  <div class="bottom">
+    <div class="quote">&ldquo;I'm capable and I'm qualified and I'm able.&rdquo;</div>
+    <div class="attribution">Keisha Lance Bottoms &middot; on her historic run for Governor</div>
+    <div class="demand">Now bring back the other 700,000 jobs. By tomorrow.</div>
+  </div>
+</body>
+</html>

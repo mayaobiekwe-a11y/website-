@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @font-face{ font-family:"Fraunces"; font-weight:600; src:url("fonts/fraunces-600.woff2") format("woff2"); }
+  @font-face{ font-family:"Inter"; font-weight:700; src:url("fonts/inter-700.woff2") format("woff2"); }
+  :root{
+    --forest:#20301F; --forest-dark:#152016; --cream:#F5F1E6;
+    --blush:#DDBBAE; --gold:#C7C05E; --oxblood:#5C2331;
+    --font-display:"Fraunces", Georgia, serif;
+    --font-body:"Inter", -apple-system, "Segoe UI", sans-serif;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html,body{ width:1080px; height:1350px; }
+  body{
+    background: var(--forest-dark);
+    font-family: var(--font-body);
+    color: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+  .mark{
+    position:absolute;
+    top: 56px; left: 64px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 25px;
+    color: var(--cream);
+    z-index: 5;
+  }
+  .mark span{ color: var(--gold); }
+  .eyebrow{
+    position: absolute;
+    top: 60px; right: 64px;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .canvas{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 90px;
+  }
+  .card{
+    width: 100%;
+    max-width: 920px;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 40px 70px rgba(0,0,0,0.4);
+  }
+  .card img{
+    display: block;
+    width: 100%;
+  }
+  .footer{
+    position: absolute;
+    left: 0; right: 0; bottom: 56px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--blush);
+    z-index: 5;
+  }
+</style>
+</head>
+<body>
+  <div class="mark">BW<span>R</span></div>
+  <div class="eyebrow">Seen On Threads</div>
+
+  <div class="canvas">
+    <div class="card">
+      <img src="photos/thread-mimi-screenshot.jpg" alt="">
+    </div>
+  </div>
+
+  <div class="footer">Black Women Rising</div>
+</body>
+</html>
